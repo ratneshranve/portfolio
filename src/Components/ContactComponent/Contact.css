@@ -1,0 +1,106 @@
+.contact-section {
+  background: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 0 42px 0;
+  min-height: 55vh;
+}
+
+.contact-card {
+  background: #111;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.20);
+  max-width: 530px;
+  width: 93vw;
+  padding: 2.6rem 2.1rem 2.3rem 2.1rem;
+  text-align: center;
+  animation: contact-fade-in 1.2s cubic-bezier(0.3,0.7,0.4,1);
+}
+
+.contact-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.1rem;
+  background: linear-gradient(90deg,#fff,#ccc 70%,#999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+}
+
+.contact-text {
+  color: #eee;
+  font-size: 1.12rem;
+  margin-bottom: 2.1rem;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 0.62em 2em 0.62em 2em;
+  font-size: 1rem;
+  border-radius: 24px;
+  background: #fff;
+  color: #181818;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.7px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.15);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  border: none;
+}
+
+.contact-link:hover {
+  background: #1a1a1a;
+  color: #fff;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.28);
+}
+
+@media (max-width: 700px) {
+  .contact-card {
+    padding: 1.2rem 0.7rem 1.1rem 0.7rem;
+  }
+  .contact-title {
+    font-size: 1.23rem;
+  }
+  .contact-text {
+    font-size: 0.99rem;
+  }
+  .contact-link {
+    padding: 0.62em 1.2em;
+    font-size: 0.98rem;
+  }
+}
+
+@keyframes contact-fade-in {
+  from { opacity: 0; transform: translateY(24px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2em;
+  row-gap: 1em; /* add more vertical space between rows */
+}
+.contact-extra {
+  color: #fff;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.contact-remark {
+  color: #fff;           /* ensures the italic text is also white */
+  font-size: 0.96em;
+  opacity: 0.85;
+  margin-top: 0.3em;
+}
