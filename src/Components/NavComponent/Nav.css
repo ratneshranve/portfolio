@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: black;
+  background-color: #101010;
   /* Prevents accidental horizontal scroll */
   overflow-x: auto;
 }

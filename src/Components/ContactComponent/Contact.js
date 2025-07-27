@@ -51,7 +51,7 @@ function Contact() {
             Instagram
           </a>
           <a
-            href="tel:+917000000000"
+            href="tel:+919770133148"
             className="contact-link"
             target="_blank"
             rel="noopener noreferrer"

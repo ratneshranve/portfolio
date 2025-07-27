@@ -3,14 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #111;
+  background: #181818;
   color: #fff;
   padding: 0 2rem;
   box-sizing: border-box;
 }
 
 .hero-content {
-  background: rgba(24,24,24,0.98);
+  background: #111;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.24);
   padding: 3rem 2.5rem;
