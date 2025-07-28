@@ -1,14 +1,26 @@
 import './Nav.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <div className="nav">
-      <div id="links">
+      {/* Hamburger Button */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+        <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+        <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+      </div>
+
+      <div id="links" className={menuOpen ? 'open' : ''}>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/resume">Resume</Link></li>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+          <li><Link to="/resume" onClick={() => setMenuOpen(false)}>Resume</Link></li>
         </ul>
       </div>
 
@@ -20,45 +32,45 @@ function Nav() {
         />
       </div>
 
-      <div id="link">
-        <ul className="flex space-x-4">
+      <div id="link" className={menuOpen ? 'open' : ''}>
+        <ul className="nav-icon-list">
           <li>
-            <Link to="/skills">
+            <Link to="/certificates" onClick={() => setMenuOpen(false)}>
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/images/certificates.png`}
+                alt="Certificates"
+                className="nav-icon"
+              />
+            </Link>
+          </li>
+          <li>
+            <Link to="/skills" onClick={() => setMenuOpen(false)}>
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/skills.png`}
                 alt="Skills"
-                style={{ maxWidth: '50px', maxHeight: '50px', width: 'auto', height: 'auto' }}
+                className="nav-icon"
               />
             </Link>
           </li>
           <li>
-            <Link to="/projects">
+            <Link to="/projects" onClick={() => setMenuOpen(false)}>
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/project.png`}
                 alt="Projects"
-                className="w-8 h-8"
+                className="nav-icon"
               />
             </Link>
           </li>
           <li>
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/contact.png`}
                 alt="Contact"
-                className="w-8 h-8"
+                className="nav-icon"
               />
             </Link>
           </li>
         </ul>
-      </div>
-
-      {/* Profile Photo */}
-      <div className="nav-profile-photo">
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/images/ratnesh.jpg`}
-          alt="Ratnesh Ranve"
-          className="profile-photo"
-        />
       </div>
     </div>
   );
