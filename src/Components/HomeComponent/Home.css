@@ -12,61 +12,72 @@
 .hero-content {
   background: #111;
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.24);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.24);
   padding: 3rem 2.5rem;
   max-width: 600px;
   text-align: center;
-  animation: hero-fade-in 1.2s cubic-bezier(0.3,0.7,0.4,1);
+  animation: hero-fade-in 1.2s cubic-bezier(0.3, 0.7, 0.4, 1);
 }
 
 .hero-title {
   font-size: 2.8rem;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  background: linear-gradient(90deg,#fff,#dadada 60%,#aaa 100%);
+  background: linear-gradient(90deg, #fff, #dadada 60%, #aaa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-          background-clip: text;
-          color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
   letter-spacing: 1px;
-  color: #f3f3f3;
+  color: #eaeaea;
 }
 
 .hero-intro {
   font-size: 1.1rem;
   color: #f4f4f4;
   line-height: 1.85;
-  margin-bottom: 0;
+  margin-bottom: 2.2rem;
 }
 
-/* Optional CTA button styling
+/* CTA Button */
 .hero-cta {
   display: inline-block;
-  margin-top: 2.2rem;
-  padding: 0.7em 2.2em;
+  margin: 0.3rem 0.5rem;
+  padding: 0.75em 2em;
   background: #fff;
   color: #111;
   border: none;
   border-radius: 28px;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 22px rgba(0,0,0,0.13);
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.13);
   transition: background 0.2s, color 0.2s;
   cursor: pointer;
 }
+
 .hero-cta:hover {
   background: #222;
   color: #fff;
 }
-*/
+
+.hero-cta.secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.hero-cta.secondary:hover {
+  background: #fff;
+  color: #111;
+}
 
 @media (max-width: 700px) {
   .hero-content {
@@ -82,6 +93,12 @@
 }
 
 @keyframes hero-fade-in {
-  from { opacity: 0; transform: translateY(30px);}
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
