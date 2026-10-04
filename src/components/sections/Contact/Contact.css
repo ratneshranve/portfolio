@@ -1,0 +1,86 @@
+.contact-panel {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 56px);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+}
+
+.contact-intro {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.contact-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
+}
+
+.contact-row:hover {
+  border-color: var(--accent);
+}
+
+.contact-row span {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-copy,
+.contact-copied {
+  opacity: 0.6;
+}
+.contact-copied {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.contact-actions {
+  margin-bottom: 30px;
+}
+
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.contact-social {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  transition: transform 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.contact-social:hover {
+  transform: translateY(-4px);
+  color: var(--accent-ink);
+  background: var(--accent);
+  border-color: var(--accent);
+}

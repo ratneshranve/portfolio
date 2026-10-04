@@ -1,30 +1,40 @@
-import './App.css';
-import Nav from './Components/NavComponent/Nav';
-import Footer from './Components/FooterComponent/Footer';
-import Home from './Components/HomeComponent/Home';
-import About from './Components/AboutComponent copy/About';
-import Projects from './Components/ProjectComponent/Project';
-import Resume from './Components/ResumeComponent/Resume';
-import Contact from './Components/ContactComponent/Contact';
-import Skills from './Components/SkillsComponent/Skills';
-import Certificates from './Components/CertificateComponent/Certificates';
-import { Routes,Route } from 'react-router-dom';
+import "./styles/theme.css";
+import "./App.css";
+
+import CursorGlow from "./components/common/CursorGlow";
+import AuroraBackground from "./components/common/AuroraBackground";
+import ScrollProgressBar from "./components/common/ScrollProgressBar";
+import BackToTop from "./components/common/BackToTop";
+
+import Navbar from "./components/sections/Navbar/Navbar";
+import Hero from "./components/sections/Hero/Hero";
+import About from "./components/sections/About/About";
+import Experience from "./components/sections/Experience/Experience";
+import Skills from "./components/sections/Skills/Skills";
+import Projects from "./components/sections/Projects/Projects";
+import Certifications from "./components/sections/Certifications/Certifications";
+import Contact from "./components/sections/Contact/Contact";
+import Footer from "./components/sections/Footer/Footer";
 
 function App() {
   return (
-   <>
-      <Nav/>
-      <Routes>
-      <Route path="/" element={ <Home/>}></Route>
-      <Route path="/about" element={ <About/>}></Route>
-      <Route path="/resume" element={ <Resume/>}></Route>
-      <Route path="/projects" element={ <Projects/>}></Route>
-      <Route path="/contact" element={ <Contact/>}></Route>
-      <Route path="/skills" element={ <Skills/>}></Route>
-      <Route path="/certificates" element={ <Certificates/>}></Route>
-      </Routes>
-      <Footer/>
-   </>
+    <>
+      <AuroraBackground />
+      <CursorGlow />
+      <ScrollProgressBar />
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Certifications />
+        <Contact />
+      </main>
+      <Footer />
+      <BackToTop />
+    </>
   );
 }
 
